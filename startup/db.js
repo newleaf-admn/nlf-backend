@@ -12,7 +12,7 @@ module.exports = function () {
     }
 
     // Updated connection string format
-    mongoose.connect('mongodb+srv://nwldev:Gd6PVhISTtJZNCoO@nwleafdb.9j2yyia.mongodb.net', options)
+    mongoose.connect(process.env.MONGO_URI, options)
         .then(() => {
             console.log('Connected to MongoDB | Server is up and running.');
         })
